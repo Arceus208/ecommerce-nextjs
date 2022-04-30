@@ -26,7 +26,7 @@ const ProductDetails = ({
         <div>
           <div className="image-container">
             <img
-              src={urlFor(image && image[index])}
+              src={urlFor(image && image[index]) as any}
               alt=""
               className="product-detail-image"
             />
@@ -34,7 +34,7 @@ const ProductDetails = ({
           <div className="small-images-container">
             {image?.map((item: any, i: number) => (
               <img
-                src={urlFor(item)}
+                src={urlFor(item) as any}
                 alt=""
                 className={
                   i === index ? "small-image selected_image" : "small-image"

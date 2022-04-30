@@ -76,7 +76,7 @@ const Cart: React.FC<{}> = ({}) => {
             cartItems.map((item: any) => (
               <div className="product" key={item._id}>
                 <img
-                  src={urlFor(item?.image[0])}
+                  src={urlFor(item?.image[0]) as any}
                   alt=""
                   className="cart-product-image"
                 />
